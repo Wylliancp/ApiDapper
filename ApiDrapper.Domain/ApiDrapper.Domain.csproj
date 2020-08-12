@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BackOfficeContext\**" />
+    <Compile Remove="FinanceContext\**" />
+    <Compile Remove="SharedContext\**" />
+    <Compile Remove="StoreContext\Commands\Output\**" />
+    <EmbeddedResource Remove="BackOfficeContext\**" />
+    <EmbeddedResource Remove="FinanceContext\**" />
+    <EmbeddedResource Remove="SharedContext\**" />
+    <EmbeddedResource Remove="StoreContext\Commands\Output\**" />
+    <None Remove="BackOfficeContext\**" />
+    <None Remove="FinanceContext\**" />
+    <None Remove="SharedContext\**" />
+    <None Remove="StoreContext\Commands\Output\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidator" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiDrapper.Shared\ApiDrapper.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

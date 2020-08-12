@@ -1,0 +1,23 @@
+﻿Contexto que contém coisas comum com os outros Contexto( BackOfficeContext, FinanceContext, StoreContext).
+
+ex: VOs, DTO, Command, Events entres outros...
+
+
+e 
+
+Devera criar um DOMAIN para cada Contexto.
+
+ex:
+
+Api.Drapper.Domain
+Api.Drapper.DomainBackOffice
+Api.Drapper.DomainFinance
+Api.Drapper.DomainShared
+
+Lembrando que temos três formas de compartilha informações de contextos diferentes.
+
+1 - Varios Context na mesma soluction
+2 - Por meio de Pacote Nuget de algum Context
+3 - Por meio de Serviço.(Obs: Não significa que seja arquitetura de microService!). somente compartilhamento de serviços
+
+
